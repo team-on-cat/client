@@ -1,11 +1,14 @@
 .card-template {
   width: 100%;
   min-height: 300px;
-  min-width: 500px;
-  padding-left: 25px; 
-  padding-top: 10px; 
+  /* min-width: 500px; */
+  padding-left: 0px; 
+  padding-top: 0px; 
 }
 
+/* #element {
+  top: 0;
+} */
 
 .card-1 {
   background-image: url('/assets/card-bg/card-bg-1.jpg');
@@ -34,7 +37,7 @@
 .card-5 {
   background-image: url('/assets/card-bg/card-bg-5.jpg');
   background-size: cover;
-  color: black;
+  color: white;
 }
 
 .card-6 {
