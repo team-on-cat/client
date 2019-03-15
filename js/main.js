@@ -12,7 +12,8 @@ let app = new Vue({
     },
     newData: '',
     cardFromDatabase: {},
-    currentCanvas: ''
+    currentCanvas: '',
+    submited: false
   },
   methods: {
     changeTheme(theme) {
@@ -45,6 +46,7 @@ let app = new Vue({
         })
         .then(({ data }) => {
           this.cardFromDatabase = data;
+          this.submited = true;
         })
         .catch(({ response }) => {
           console.log(response);
