@@ -12,7 +12,7 @@ Vue.component('modal-card', {
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Bussiness Card</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -22,18 +22,23 @@ Vue.component('modal-card', {
             <img style="width: 100%" :src="urlGoogle" />
           </div>
 
-          <div class="btn btn-facebook btn-lg" v-bind:data-href="urlGoogle" data-layout="button_count" data-size="small">
-            <a
-            target="_blank" v-bind:href="fb+urlGoogle" class="fb-xfbml-parse-ignore">Share on Facebook</a>
-          </div>
-          <a href="https://api.whatsapp.com/send?text=%20https://storage.googleapis.com/hacktiv8/1552576536390contohpic1.jpg">SHARE WA</a>
-          <div id="social-share-container">
-            <div id="custom-tweet-button">
-                <a class="btn btn-twitter" id="tweetShare" v-bind:href="tweet+ urlGoogle" target="_blank">
-                    <i class="fab fa-twitter"></i> Tweet
-                </a>
+          <div class="d-flex justify-content-around pb-3">
+            <div class="btn btn-facebook btn-md" v-bind:data-href="urlGoogle" data-layout="button_count" data-size="small">
+              <a
+              target="_blank" v-bind:href="fb+urlGoogle" class="fb-xfbml-parse-ignore">Share on Facebook</a>
             </div>
-        </div>
+
+            <a class="btn btn-md btn-success" href="https://api.whatsapp.com/send?text=%20https://storage.googleapis.com/hacktiv8/1552576536390contohpic1.jpg">SHARE WA</a>
+
+            <div id="social-share-container">
+              <div id="custom-tweet-button">
+                  <a class="btn btn-twitter" id="tweetShare" v-bind:href="tweet+ urlGoogle" target="_blank">
+                      <i class="fab fa-twitter"></i> Tweet
+                  </a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>

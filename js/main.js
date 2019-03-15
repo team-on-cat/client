@@ -8,7 +8,7 @@ let app = new Vue({
       job: 'Your Job',
       email: 'email@domain.com',
       phone: '(123) 123 4567',
-      theme: 'card-4'
+      theme: 'card-8'
     },
     landing: true,
     newData: '',
