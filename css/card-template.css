@@ -40,6 +40,36 @@
   color: white;
 }
 
+/* FB */
+.btn-facebook, .btn-facebook a {
+  text-decoration: none;
+  color: #fff;
+  display: inline;
+  background-color: #4C67A1;
+}
+.btn-facebook:hover {
+  color: #fff;
+  background-color: #405D9B;
+}
+.btn-facebook:focus {
+  color: #fff;
+}
+/* Twitter */
+.btn-twitter {
+  background: #00ACEE;
+  border-radius: 5px;
+  color: #fff;
+  border-width: 1px;
+  border-color: #0075a2;
+}
+.btn-twitter:link, .btn-twitter:visited {
+  color: #fff; 
+}
+.btn-twitter:active, .btn-twitter:hover {
+  background: #0075a2;
+  color: #fff; 
+}
+
 .card-6 {
   background-image: url('/assets/card-bg/card-bg-6.jpg');
   background-size: cover;
