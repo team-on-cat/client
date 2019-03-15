@@ -21,6 +21,9 @@
 
   <!-- Card Template -->
   <link rel="stylesheet" href="./css/card-template.css">
+
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 </head>
 
 <body>
@@ -44,13 +47,19 @@
     <!-- HTML2Cancas Button -->
     <div>
       <input @click.prevent="preview" class="btn" type="button" value="Preview" />
-      <a id="btn-Convert-Html2Image" href="#">Download</a>
+      <a @click.prevent="submit" href="#">Submit</a>
       <br />
       <h3>Preview :</h3>
     </div>
     <div id="previewImage">
     </div>
   </div>
+
+  <!-- BLOB -->
+  <script src="./js/dataURItoBlob.js"></script>
+
+  <!-- Canvas 2 Image -->
+  <script src="./js/canvas2image.js"></script>
 
   <!-- Vue Component -->
   <script src="./js/components/preview-card.js"></script>
@@ -63,18 +72,6 @@
   <!-- HTML2Cancas Script -->
   <script>
     $(document).ready(function () {
-
-      var getCanvas; // global variable
-
-      $("#btn-Convert-Html2Image").on('click', function () {
-        var imgageData = getCanvas.toDataURL("image/png");
-        // Now browser starts downloading it instead of just showing it
-        var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-        $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
-      });
-
-
-
 
     });
   </script>
