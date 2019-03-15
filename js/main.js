@@ -10,6 +10,7 @@ let app = new Vue({
       phone: '(123) 123 4567',
       theme: 'card-4'
     },
+    landing: true,
     newData: '',
     cardFromDatabase: {},
     currentCanvas: '',
@@ -18,6 +19,9 @@ let app = new Vue({
   methods: {
     changeTheme(theme) {
       this.card.theme = theme
+    },
+    goToDashboard() {
+      this.landing = false 
     },
     preview() {
       html2canvas(document.getElementById('element'), {

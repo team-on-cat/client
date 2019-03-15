@@ -87,3 +87,22 @@
   background-size: cover;
   color: white;
 }
+
+
+.full-page {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../assets/bg/background-space.png');
+  color: #fff;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+  background-color: #000;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  background-color: #000;
+}
