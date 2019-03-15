@@ -19,7 +19,5 @@ Vue.component('preview-card', {
         </div>
       </div>
     </div>
-  
-  
   `
 })

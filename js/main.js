@@ -34,7 +34,7 @@ let app = new Vue({
     submit() {  
       var imgageData = getCanvas.toDataURL("image/png");
       // Now browser starts downloading it instead of just showing it
-      this.newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+      this.newData = imgageData.replace(/^data:image\/png/, "data:image/png");
       let data = new FormData()
       data.append('image', dataURItoBlob(this.newData), 'image')
       axios
