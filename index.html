@@ -2,13 +2,7 @@
 
 <head>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <!-- Medium Editor -->
-  <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css"
-    type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Vue.Js -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -36,23 +30,28 @@
     <div class="container-fluid">
       <div class="row d-flex">
         <!-- Background Changer -->
-        <theme-card v-on:change-theme="changeTheme"></theme-card>
-        <!-- Card Preview -->
-        <preview-card v-bind:card="card"></preview-card>
-        <!-- Editor Field -->
-        <field-card v-bind:card="card"></field-card>
+        <theme-card class="col-sm-5 col-md-3" v-on:change-theme="changeTheme"></theme-card>
+
+        <!-- Editor -->
+        <div class="col-sm-7 col-md-9">
+          <div class="row">
+            <!-- Card Preview -->
+            <preview-card class="col-sm-12 col-md-7 mb-2 shadow" v-bind:card="card"></preview-card>
+            <!-- Editor Field -->
+            <field-card class="col-sm-12 col-md-5" v-bind:card="card"></field-card>
+          </div>
+          <div class="row">
+            <div>
+              <input @click.prevent="preview" class="btn btn-info" type="button" value="Preview" />
+              <a class="btn btn-success" @click.prevent="submit" href="#">Submit</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- HTML2Cancas Button -->
-    <div>
-      <input @click.prevent="preview" class="btn" type="button" value="Preview" />
-      <a @click.prevent="submit" href="#">Submit</a>
-      <br />
-      <h3>Preview :</h3>
-    </div>
-    <div id="previewImage">
-    </div>
+
   </div>
 
   <!-- BLOB -->

@@ -1,8 +1,9 @@
 Vue.component('field-card', {
   props: ['card'],
   template: `
-  <div class="col-lg-4 align-self-center justify-content-center">
+  <div>
     <form>
+      <h4 class="text-justify"> Fill your ID </h4>
       <div class="form-group">
         <input v-model="card.name" type="text" class="form-control editable" id="name" placeholder="Name">
       </div>

@@ -27,7 +27,7 @@ let app = new Vue({
             document.body.removeChild(this.currentCanvas);  
           }
           this.currentCanvas = canvas
-          document.body.appendChild(canvas);
+          document.body.appendChild(canvas).style.display = 'none';
           getCanvas = canvas
         });
     },

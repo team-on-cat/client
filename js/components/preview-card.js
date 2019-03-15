@@ -1,7 +1,7 @@
 Vue.component('preview-card', {
   props: ['card'],
   template: `
-  <div class="col-md-8 col-lg-5 align-self-center">
+  
     <div id="element" class="card-template" v-bind:class="card.theme">
       <div id="card-template" class="container mt-5">
         <div class="mt-2 row align-items-end">
@@ -19,7 +19,7 @@ Vue.component('preview-card', {
         </div>
       </div>
     </div>
-  </div>
+  
   
   `
 })
