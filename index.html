@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Vue.Js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- HTML2Canvas Local -->
+  <script src="./js/html2canvas.js"></script>
+
+  <!-- Card Template -->
+  <link rel="stylesheet" href="./css/card-template.css">
+
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</head>
+
+<body>
+  <!-- Vue instance -->
+  <div id="app">
+
+    <transition name="fade">
+
+      <landing-page v-if="landing" v-on:go-dashboard="goToDashboard"></landing-page>
+
+      <div v-if="!landing">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Team'O Cat</a>
+          </nav>
+      
+          <!-- Card Preview -->
+          <div class="container-fluid">
+            <div class="row d-flex">
+              <!-- Background Changer -->
+              <theme-card class="col-sm-5 col-md-3" v-on:change-theme="changeTheme"></theme-card>
+      
+              <!-- Editor -->
+              <div class="col-sm-7 col-md-9">
+                <div class="row">
+                  <!-- Card Preview -->
+                  <preview-card class="col-sm-12 col-md-7 mb-2 shadow" v-bind:card="card"></preview-card>
+                  <!-- Editor Field -->
+                  <field-card class="col-sm-12 col-md-5" v-bind:card="card"></field-card>
+                </div>
+                <div class="row">
+                  <div>
+                    <input @click.prevent="preview" class="btn btn-info" type="button" value="Apply" />
+                    <a id="" class="btn btn-success" @click.prevent="submit" href="#" data-toggle="modal"
+                      data-target="#exampleModal">Submit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <modal-card :url-google="cardFromDatabase.businessCardUrl"></modal-card>
+      
+          <!-- Modal -->
+
+      </div>
+
+      </transition>
+
+  </div>
+  <!-- Vue instance -->
+
+  <!-- BLOB -->
+  <script src="./js/dataURItoBlob.js"></script>
+
+  <!-- Canvas 2 Image -->
+  <script src="./js/canvas2image.js"></script>
+
+  <!-- Vue Component -->
+  <script src="./js/components/landing-page.js"></script>
+  <script src="./js/components/preview-card.js"></script>
+  <script src="./js/components/content-card.js"></script>
+  <script src="./js/components/theme-card.js"></script>
+  <script src="./js/components/modal.js"></script>
+
+  <!-- Vue Instance -->
+  <script src="./js/main.js"></script>
+
+  <!-- HTML2Cancas Script -->
+  <script>
+
+  </script>
+</body>
+
+</html>

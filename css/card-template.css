@@ -1,0 +1,108 @@
+.card-template {
+  width: 100%;
+  min-height: 300px;
+  /* min-width: 500px; */
+  padding-left: 0px; 
+  padding-top: 0px; 
+}
+
+/* #element {
+  top: 0;
+} */
+
+.card-1 {
+  background-image: url('/assets/card-bg/card-bg-1.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-2 {
+  background-image: url('/assets/card-bg/card-bg-2.webp');
+  background-size: cover;
+  color: white;
+}
+
+.card-3 {
+  background-image: url('/assets/card-bg/card-bg-3.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-4 {
+  background-image: url('/assets/card-bg/card-bg-4.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-5 {
+  background-image: url('/assets/card-bg/card-bg-5.jpg');
+  background-size: cover;
+  color: white;
+}
+
+/* FB */
+.btn-facebook, .btn-facebook a {
+  text-decoration: none;
+  color: #fff;
+  display: inline;
+  background-color: #4C67A1;
+}
+.btn-facebook:hover {
+  color: #fff;
+  background-color: #405D9B;
+}
+.btn-facebook:focus {
+  color: #fff;
+}
+/* Twitter */
+.btn-twitter {
+  background: #00ACEE;
+  border-radius: 5px;
+  color: #fff;
+  border-width: 1px;
+  border-color: #0075a2;
+}
+.btn-twitter:link, .btn-twitter:visited {
+  color: #fff; 
+}
+.btn-twitter:active, .btn-twitter:hover {
+  background: #0075a2;
+  color: #fff; 
+}
+
+.card-6 {
+  background-image: url('/assets/card-bg/card-bg-6.jpg');
+  background-size: cover;
+  color: black;
+}
+
+.card-7 {
+  background-image: url('/assets/card-bg/card-bg-7.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-8 {
+  background-image: url('/assets/card-bg/card-bg-8.png');
+  background-size: cover;
+  color: white;
+}
+
+
+.full-page {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../assets/bg/background-space.png');
+  color: #fff;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+  background-color: #000;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  background-color: #000;
+}
