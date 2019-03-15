@@ -1,0 +1,56 @@
+.card-template {
+  width: 100%;
+  min-height: 300px;
+  min-width: 500px;
+  padding-left: 25px; 
+  padding-top: 10px; 
+}
+
+
+.card-1 {
+  background-image: url('/assets/card-bg/card-bg-1.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-2 {
+  background-image: url('/assets/card-bg/card-bg-2.webp');
+  background-size: cover;
+  color: white;
+}
+
+.card-3 {
+  background-image: url('/assets/card-bg/card-bg-3.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-4 {
+  background-image: url('/assets/card-bg/card-bg-4.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-5 {
+  background-image: url('/assets/card-bg/card-bg-5.jpg');
+  background-size: cover;
+  color: black;
+}
+
+.card-6 {
+  background-image: url('/assets/card-bg/card-bg-6.jpg');
+  background-size: cover;
+  color: black;
+}
+
+.card-7 {
+  background-image: url('/assets/card-bg/card-bg-7.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.card-8 {
+  background-image: url('/assets/card-bg/card-bg-8.png');
+  background-size: cover;
+  color: white;
+}
