@@ -2,18 +2,20 @@
 
 <head>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Medium Editor -->
   <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css"
+    type="text/css" media="screen" charset="utf-8">
 
   <!-- Vue.Js -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  
+
   <!-- HTML2Canvas Local -->
   <script src="./js/html2canvas.js"></script>
 
@@ -23,9 +25,13 @@
 
 <body>
   <div id="app">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Team'O Cat</a>
+    </nav>
+
     <!-- Card Preview -->
     <div class="container-fluid">
-      <div class="row">
+      <div class="row d-flex">
         <!-- Background Changer -->
         <theme-card v-on:change-theme="changeTheme"></theme-card>
         <!-- Card Preview -->
@@ -36,10 +42,12 @@
     </div>
 
     <!-- HTML2Cancas Button -->
-    <input id="btn-Preview-Image" type="button" value="Preview" />
-    <a id="btn-Convert-Html2Image" href="#">Download</a>
-    <br />
-    <h3>Preview :</h3>
+    <div>
+      <input @click.prevent="preview" class="btn" type="button" value="Preview" />
+      <a id="btn-Convert-Html2Image" href="#">Download</a>
+      <br />
+      <h3>Preview :</h3>
+    </div>
     <div id="previewImage">
     </div>
   </div>
@@ -57,23 +65,11 @@
     $(document).ready(function () {
 
       var getCanvas; // global variable
-      $("#btn-Preview-Image").on('click', function () {
-        html2canvas(document.getElementById('html-content-holder'), {
-            allowTaint: true
-          })
-          .then(function (canvas) {
-            document.body.appendChild(canvas);
-            getCanvas = canvas
-          });
-
-      });
 
       $("#btn-Convert-Html2Image").on('click', function () {
         var imgageData = getCanvas.toDataURL("image/png");
         // Now browser starts downloading it instead of just showing it
         var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-
-        console.log(newData)
         $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
       });
 
